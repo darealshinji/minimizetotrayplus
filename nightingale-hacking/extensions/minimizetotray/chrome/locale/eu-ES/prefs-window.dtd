@@ -1,0 +1,8 @@
+<!ENTITY dialog.title.label "Erretilura Ikonotzeko Aukerak">
+<!ENTITY groupbox.general.label "Erretilura Ikonotzeko Aukerak">
+<!ENTITY chk.always.label "Beti ikonotu erretilura">
+<!ENTITY chk.always.accesskey "B">
+<!ENTITY chk.twoclickrestore.label "Klik bikoitza eskatu erretilutik leheneratzeko.">
+<!ENTITY chk.twoclickrestore.accesskey "K">
+<!ENTITY chk.minimizeonclose.label "ikonotu erretiluan ixterakoan">
+<!ENTITY chk.minimizeonclose.accesskey "i">

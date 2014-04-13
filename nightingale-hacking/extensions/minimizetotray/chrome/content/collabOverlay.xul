@@ -1,0 +1,39 @@
++<?xml version="1.0"?>
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://minimizetotray/locale/brand.dtd"> %brandDTD;
+<!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd"> %messengerDTD;
+<!ENTITY % commonDTD SYSTEM "chrome://minimizetotray/locale/common.dtd"> %commonDTD;
+]>
+<overlay id="minimizetotrayMailOverlay"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="text/javascript" src="chrome://minimizetotray/content/core.js"/>
+    <script type="text/javascript" src="chrome://minimizetotray/content/mail.js"/>
+    <!--  the key short cut -->
+    <keyset id="framework-keyset">
+        <key id="extensions.minimizetotrayplus.key.menuitem"/>
+    </keyset>
+    <!-- toolbar button -->
+    <toolbarpalette id="framework-toolpalette">
+        <toolbarbutton id="extensions-minimizetotray-button-minimize"/>
+    </toolbarpalette>
+    <!-- file menu item  -->
+    <menupopup id="file-menupopup">
+        <menuitem id="extensions.minimizetotrayplus.menuitem.menuitem"
+                          insertbefore="file-close-item"/>
+    </menupopup>
+	<!-- tray popup -->
+	<script type="text/javascript">
+		window.extensions.minimizetotrayplus.trayMenuCreate = function(trayMenu) {
+			this.creatMenuItem(trayMenu, "item", "&cmd.restore.label;", "&cmd.restore.accesskey;", 
+				this.restoreWindow);
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&getMsgButton.label;", null, 
+				function () { goDoCommand('cmd_getMsgsForAuthAccounts'); } );
+			this.creatMenuItem(trayMenu, "item", "&newMsgCmd.label;", "&newMsgCmd.accesskey;", 
+				function () { MsgNewMessage(null); } );
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&cmd.close.window.label;", "&cmd.close.accesskey;", 
+				this.trayWindowClose);
+		};
+	</script>
+</overlay>

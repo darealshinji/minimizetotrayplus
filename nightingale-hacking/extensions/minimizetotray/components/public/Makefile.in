@@ -1,0 +1,17 @@
+DEPTH = ../../../..
+topsrcdir = @top_srcdir@
+srcdir = @srcdir@
+VPATH = @srcdir@
+
+include $(DEPTH)/build/autodefs.mk
+
+IS_EXTENSION = 1
+
+# compile these IDL files
+XPIDL_SRCS = trayInterface.idl
+
+# into this xpt (an xpt is like a compiled IDL read at runtime)
+XPIDL_MODULE = minimizetotray.xpt
+
+include $(topsrcdir)/build/rules.mk
+

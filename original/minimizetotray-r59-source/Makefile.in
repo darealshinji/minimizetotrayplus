@@ -1,0 +1,38 @@
+DEPTH           = ../..
+topsrcdir       = @top_srcdir@
+srcdir          = @srcdir@
+VPATH           = @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+USE_EXTENSION_MANIFEST  = 1
+
+MODULE		    = minimizetotray
+XPIDL_MODULE	= minimizetotray
+XPI_NAME        = minimizetotray
+XPI_FILES       = chrome.manifest
+INSTALL_EXTENSION_ID   = {de1b245c-de57-11da-ba2d-0050c2490048}
+
+
+ifeq ($(MOZ_WIDGET_TOOLKIT),windows)
+DIRS        = source/windows
+else
+DIRS        = source/linux
+endif
+
+DIRS        += source
+
+DIST_FILES = install.rdf \
+    LICENCE
+
+PREF_JS_EXPORTS =                            \
+        $(srcdir)/defaults/preferences/minimizetotray.js    \
+        $(NULL)
+
+EXTRA_PP_COMPONENTS =                          \
+                components/trayCommandLine.js  \
+                components/loader.js           \
+                components/components.manifest \
+                $(NULL)
+
+include $(topsrcdir)/config/rules.mk

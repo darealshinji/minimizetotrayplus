@@ -1,0 +1,200 @@
+minimizetotray.jar:
+% content minimizetotray %content/
+  content/collabOverlay.xul	(chrome/content/collabOverlay.xul)
+  content/downloadOverlay.xul	(chrome/content/downloadOverlay.xul)
+  content/playerOverlay.xul	(chrome/content/playerOverlay.xul)
+  content/minimizetotray.xul	(chrome/content/minimizetotray.xul)
+  content/player.js	(chrome/content/player.js)
+  content/browser.js	(chrome/content/browser.js)
+  content/calender.js	(chrome/content/calender.js)
+  content/core.js	(chrome/content/core.js)
+  content/download.js	(chrome/content/download.js)
+  content/messengerOverlay.xul	(chrome/content/messengerOverlay.xul)
+  content/mailOverlay.xul	(chrome/content/mailOverlay.xul)
+  content/turboNavigator.xul	(chrome/content/turboNavigator.xul)
+  content/turbo.js	(chrome/content/turbo.js)
+  content/prefs-window.js	(chrome/content/prefs-window.js)
+  content/calendarOverlay.xul	(chrome/content/calendarOverlay.xul)
+  content/browserOverlay.xul	(chrome/content/browserOverlay.xul)
+  content/prefs.xul	(chrome/content/prefs.xul)
+  content/mail.js	(chrome/content/mail.js)
+  content/turboBrowser.xul	(chrome/content/turboBrowser.xul)
+  content/navigatorOverlay.xul	(chrome/content/navigatorOverlay.xul)
+% skin minimizetotray classic/1.0 %skin/
+  skin/icon.png                (chrome/skin/icon.png)
+  skin/minimize-16.png        (chrome/skin/minimize-16.png)
+  skin/minimize-24.png        (chrome/skin/minimize-24.png)
+  skin/minimizetotray.css    (chrome/skin/minimizetotray.css)
+% locale	minimizetotray	ca-AD	%locale/ca-AD/
+#% locale	minimizetotray	cs-CZ	%locale/cs-CZ/
+% locale	minimizetotray	da-DK	%locale/da-DK/
+% locale	minimizetotray	de		%locale/de/
+% locale	minimizetotray	el-GR	%locale/el-GR/
+% locale	minimizetotray	en-US	%locale/en-US/
+% locale	minimizetotray	es-ES	%locale/es-ES/
+% locale	minimizetotray	et-EE	%locale/et-EE/
+#% locale	minimizetotray	eu-ES	%locale/eu-ES/
+#% locale	minimizetotray	fi-FI	%locale/fi-FI/
+% locale	minimizetotray	fr		%locale/fr/
+% locale	minimizetotray	fy-NL	%locale/fy-NL/
+% locale	minimizetotray	he-IL	%locale/he-IL/
+% locale	minimizetotray	hr-HR	%locale/hr-HR/
+% locale	minimizetotray	hu-HU	%locale/hu-HU/
+% locale	minimizetotray	is-IS	%locale/is-IS/
+% locale	minimizetotray	it-IT	%locale/it-IT/
+% locale	minimizetotray	ja	    %locale/ja/
+% locale	minimizetotray	ko-KR	%locale/ko-KR/
+% locale	minimizetotray	lt-LT	%locale/lt-LT/
+% locale	minimizetotray	mk-MK	%locale/mk-MK/
+#% locale	minimizetotray	nb-NO	%locale/nb-NO/
+% locale	minimizetotray	nl		%locale/nl/
+% locale	minimizetotray	pl-PL	%locale/pl-PL/
+% locale	minimizetotray	pt-BR	%locale/pt-BR/
+% locale	minimizetotray	pt-PT	%locale/pt-PT/
+% locale	minimizetotray	ro-RO	%locale/ro-RO/
+% locale	minimizetotray	ru-RU	%locale/ru-RU/
+% locale	minimizetotray	si-LK	%locale/si-LK/
+% locale	minimizetotray	sk-SK	%locale/sk-SK/
+#% locale	minimizetotray	sl-SL	%locale/sl-SL/
+% locale	minimizetotray	sr-RS	%locale/sr-RS/
+% locale	minimizetotray	sv-SE	%locale/sv-SE/
+% locale	minimizetotray	vi-VN	%locale/vi-VN/
+% locale	minimizetotray	zh-CN	%locale/zh-CN/
+% locale	minimizetotray	zh-TW	%locale/zh-TW/
+  locale/vi-VN/prefs-window.dtd	(chrome/locale/vi-VN/prefs-window.dtd)
+  locale/vi-VN/common.dtd	(chrome/locale/vi-VN/common.dtd)
+  locale/vi-VN/common.properties	(chrome/locale/vi-VN/common.properties)
+  locale/pl-PL/prefs-window.dtd	(chrome/locale/pl-PL/prefs-window.dtd)
+  locale/pl-PL/common.dtd	(chrome/locale/pl-PL/common.dtd)
+  locale/pl-PL/common.properties	(chrome/locale/pl-PL/common.properties)
+#  locale/sl-SL/prefs-window.dtd	(chrome/locale/sl-SL/prefs-window.dtd)
+#  locale/sl-SL/common.dtd	(chrome/locale/sl-SL/common.dtd)
+#  locale/sl-SL/common.properties	(chrome/locale/sl-SL/common.properties)
+  locale/is-IS/prefs-window.dtd	(chrome/locale/is-IS/prefs-window.dtd)
+  locale/is-IS/common.dtd	(chrome/locale/is-IS/common.dtd)
+  locale/is-IS/common.properties	(chrome/locale/is-IS/common.properties)
+  locale/hu-HU/prefs-window.dtd	(chrome/locale/hu-HU/prefs-window.dtd)
+  locale/hu-HU/common.dtd	(chrome/locale/hu-HU/common.dtd)
+  locale/hu-HU/common.properties	(chrome/locale/hu-HU/common.properties)
+  locale/lt-LT/prefs-window.dtd	(chrome/locale/lt-LT/prefs-window.dtd)
+  locale/lt-LT/common.dtd	(chrome/locale/lt-LT/common.dtd)
+  locale/lt-LT/common.properties	(chrome/locale/lt-LT/common.properties)
+  locale/sr-RS/prefs-window.dtd	(chrome/locale/sr-RS/prefs-window.dtd)
+  locale/sr-RS/common.dtd	(chrome/locale/sr-RS/common.dtd)
+  locale/sr-RS/common.properties	(chrome/locale/sr-RS/common.properties)
+  locale/pt-BR/prefs-window.dtd	(chrome/locale/pt-BR/prefs-window.dtd)
+  locale/pt-BR/common.dtd	(chrome/locale/pt-BR/common.dtd)
+  locale/pt-BR/common.properties	(chrome/locale/pt-BR/common.properties)
+  locale/it-IT/prefs-window.dtd	(chrome/locale/it-IT/prefs-window.dtd)
+  locale/it-IT/common.dtd	(chrome/locale/it-IT/common.dtd)
+  locale/it-IT/common.properties	(chrome/locale/it-IT/common.properties)
+  locale/hr-HR/prefs-window.dtd	(chrome/locale/hr-HR/prefs-window.dtd)
+  locale/hr-HR/common.dtd	(chrome/locale/hr-HR/common.dtd)
+  locale/hr-HR/common.properties	(chrome/locale/hr-HR/common.properties)
+  locale/ca-AD/prefs-window.dtd	(chrome/locale/ca-AD/prefs-window.dtd)
+  locale/ca-AD/common.dtd	(chrome/locale/ca-AD/common.dtd)
+  locale/ca-AD/common.properties	(chrome/locale/ca-AD/common.properties)
+  locale/en-US/prefs-window.dtd	(chrome/locale/en-US/prefs-window.dtd)
+  locale/en-US/common.dtd	(chrome/locale/en-US/common.dtd)
+  locale/en-US/common.properties	(chrome/locale/en-US/common.properties)
+  locale/si-LK/prefs-window.dtd	(chrome/locale/si-LK/prefs-window.dtd)
+  locale/si-LK/common.dtd	(chrome/locale/si-LK/common.dtd)
+  locale/si-LK/common.properties	(chrome/locale/si-LK/common.properties)
+  locale/pt-PT/prefs-window.dtd	(chrome/locale/pt-PT/prefs-window.dtd)
+  locale/pt-PT/common.dtd	(chrome/locale/pt-PT/common.dtd)
+  locale/pt-PT/common.properties	(chrome/locale/pt-PT/common.properties)
+  locale/sv-SE/prefs-window.dtd	(chrome/locale/sv-SE/prefs-window.dtd)
+  locale/sv-SE/common.dtd	(chrome/locale/sv-SE/common.dtd)
+  locale/sv-SE/common.properties	(chrome/locale/sv-SE/common.properties)
+  locale/fy-NL/prefs-window.dtd	(chrome/locale/fy-NL/prefs-window.dtd)
+  locale/fy-NL/common.dtd	(chrome/locale/fy-NL/common.dtd)
+  locale/fy-NL/common.properties	(chrome/locale/fy-NL/common.properties)
+#  locale/fi-FI/prefs-window.dtd	(chrome/locale/fi-FI/prefs-window.dtd)
+#  locale/fi-FI/common.dtd	(chrome/locale/fi-FI/common.dtd)
+#  locale/fi-FI/common.properties	(chrome/locale/fi-FI/common.properties)
+  locale/ru-RU/prefs-window.dtd	(chrome/locale/ru-RU/prefs-window.dtd)
+  locale/ru-RU/common.dtd	(chrome/locale/ru-RU/common.dtd)
+  locale/ru-RU/common.properties	(chrome/locale/ru-RU/common.properties)
+  locale/sk-SK/prefs-window.dtd	(chrome/locale/sk-SK/prefs-window.dtd)
+  locale/sk-SK/common.dtd	(chrome/locale/sk-SK/common.dtd)
+  locale/sk-SK/common.properties	(chrome/locale/sk-SK/common.properties)
+  locale/ko-KR/prefs-window.dtd	(chrome/locale/ko-KR/prefs-window.dtd)
+  locale/ko-KR/common.dtd	(chrome/locale/ko-KR/common.dtd)
+  locale/ko-KR/common.properties	(chrome/locale/ko-KR/common.properties)
+  locale/he-IL/prefs-window.dtd	(chrome/locale/he-IL/prefs-window.dtd)
+  locale/he-IL/common.dtd	(chrome/locale/he-IL/common.dtd)
+  locale/he-IL/common.properties	(chrome/locale/he-IL/common.properties)
+  locale/mk-MK/prefs-window.dtd	(chrome/locale/mk-MK/prefs-window.dtd)
+  locale/mk-MK/common.dtd	(chrome/locale/mk-MK/common.dtd)
+  locale/mk-MK/common.properties	(chrome/locale/mk-MK/common.properties)
+  locale/et-EE/prefs-window.dtd	(chrome/locale/et-EE/prefs-window.dtd)
+  locale/et-EE/common.dtd	(chrome/locale/et-EE/common.dtd)
+  locale/et-EE/common.properties	(chrome/locale/et-EE/common.properties)
+  locale/fr/prefs-window.dtd	(chrome/locale/fr/prefs-window.dtd)
+  locale/fr/common.dtd	(chrome/locale/fr/common.dtd)
+  locale/fr/common.properties	(chrome/locale/fr/common.properties)
+  locale/de/prefs-window.dtd	(chrome/locale/de/prefs-window.dtd)
+  locale/de/common.dtd	(chrome/locale/de/common.dtd)
+  locale/de/common.properties	(chrome/locale/de/common.properties)
+#  locale/cs-CZ/prefs-window.dtd	(chrome/locale/cs-CZ/prefs-window.dtd)
+#  locale/cs-CZ/common.dtd	(chrome/locale/cs-CZ/common.dtd)
+#  locale/cs-CZ/common.properties	(chrome/locale/cs-CZ/common.properties)
+  locale/zh-CN/prefs-window.dtd	(chrome/locale/zh-CN/prefs-window.dtd)
+  locale/zh-CN/common.dtd	(chrome/locale/zh-CN/common.dtd)
+  locale/zh-CN/common.properties	(chrome/locale/zh-CN/common.properties)
+  locale/es-ES/prefs-window.dtd	(chrome/locale/es-ES/prefs-window.dtd)
+  locale/es-ES/common.dtd	(chrome/locale/es-ES/common.dtd)
+  locale/es-ES/common.properties	(chrome/locale/es-ES/common.properties)
+  locale/ro-RO/prefs-window.dtd	(chrome/locale/ro-RO/prefs-window.dtd)
+  locale/ro-RO/common.dtd	(chrome/locale/ro-RO/common.dtd)
+  locale/ro-RO/common.properties	(chrome/locale/ro-RO/common.properties)
+  locale/da-DK/prefs-window.dtd	(chrome/locale/da-DK/prefs-window.dtd)
+  locale/da-DK/common.dtd	(chrome/locale/da-DK/common.dtd)
+  locale/da-DK/common.properties	(chrome/locale/da-DK/common.properties)
+  locale/nl/prefs-window.dtd	(chrome/locale/nl/prefs-window.dtd)
+  locale/nl/common.dtd	(chrome/locale/nl/common.dtd)
+  locale/nl/common.properties	(chrome/locale/nl/common.properties)
+  locale/zh-TW/prefs-window.dtd	(chrome/locale/zh-TW/prefs-window.dtd)
+  locale/zh-TW/common.dtd	(chrome/locale/zh-TW/common.dtd)
+  locale/zh-TW/common.properties	(chrome/locale/zh-TW/common.properties)
+  locale/el-GR/prefs-window.dtd	(chrome/locale/el-GR/prefs-window.dtd)
+  locale/el-GR/common.dtd	(chrome/locale/el-GR/common.dtd)
+  locale/el-GR/common.properties	(chrome/locale/el-GR/common.properties)
+#  locale/eu-ES/prefs-window.dtd	(chrome/locale/eu-ES/prefs-window.dtd)
+#  locale/eu-ES/common.dtd	(chrome/locale/eu-ES/common.dtd)
+#  locale/eu-ES/common.properties	(chrome/locale/eu-ES/common.properties)
+#  locale/nb-NO/prefs-window.dtd	(chrome/locale/nb-NO/prefs-window.dtd)
+#  locale/nb-NO/common.dtd	(chrome/locale/nb-NO/common.dtd)
+#  locale/nb-NO/common.properties	(chrome/locale/nb-NO/common.properties)
+  locale/ja/prefs-window.dtd	(chrome/locale/ja/prefs-window.dtd)
+  locale/ja/common.dtd	(chrome/locale/ja/common.dtd)
+  locale/ja/common.properties	(chrome/locale/ja/common.properties)
+% override chrome://minimizetotray/locale/brand.dtd chrome://global/locale/brand.dtd
+#% Firefox, Flock
+% overlay	chrome://browser/content/browser.xul		        chrome://minimizetotray/content/browserOverlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+% overlay	chrome://browser/content/browser.xul		        chrome://minimizetotray/content/browserOverlay.xul application={a463f10c-3994-11da-9945-000d60ca027b}
+% overlay	chrome://browser/content/browser.xul		        chrome://minimizetotray/content/minimizetotray.xul
+#% Firefox download window
+% overlay chrome://mozapps/content/downloads/downloads.xul    chrome://minimizetotray/content/downloadOverlay.xul
+% overlay chrome://mozapps/content/downloads/downloads.xul    chrome://minimizetotray/content/minimizetotray.xul
+#% Thunderbird, Postbox
+% overlay	chrome://messenger/content/messenger.xul	        chrome://minimizetotray/content/mailOverlay.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+% overlay	chrome://messenger/content/messenger.xul	        chrome://minimizetotray/content/mailOverlay.xul application=postbox@postbox-inc.com
+% overlay	chrome://messenger/content/messenger.xul	        chrome://minimizetotray/content/minimizetotray.xul
+#% Sunbird
+% overlay chrome://sunbird/content/calendar.xul				chrome://minimizetotray/content/calendarOverlay.xul
+% overlay chrome://sunbird/content/calendar.xul		        chrome://minimizetotray/content/minimizetotray.xul
+#% SeaMonkey
+% overlay chrome://navigator/content/navigator.xul			chrome://minimizetotray/content/navigatorOverlay.xul
+% overlay chrome://navigator/content/navigator.xul			chrome://minimizetotray/content/minimizetotray.xul
+% overlay	chrome://messenger/content/messenger.xul			chrome://minimizetotray/content/messengerOverlay.xul application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+% overlay chrome://minimizetotray/content/turboNavigator.xul  chrome://editor/content/editorTasksOverlay.xul 
+#% Songbird
+% overlay chrome://songbird/content/xul/layoutWithBrowserOverlay.xul	chrome://minimizetotray/content/playerOverlay.xul
+% overlay chrome://songbird/content/xul/layoutWithBrowserOverlay.xul	chrome://minimizetotray/content/minimizetotray.xul
+% override chrome://minimizetotray/locale/brand.dtd chrome://branding/locale/brand.dtd application=songbird@songbirdnest.com
+% style	chrome://global/content/customizeToolbar.xul		chrome://minimizetotray/skin/minimizetotray.css
+% overlay    chrome://collab/content/collab.xul          chrome://minimizetotray/content/collabOverlay.xul
+% overlay    chrome://collab/content/collab.xul          chrome://minimizetotray/content/minimizetotray.xul
+% override      chrome://minimizetotray/locale/brand.dtd        chrome://branding/locale/brand.dtd application={ee53ece0-255c-4cc6-8a7e-81a8b6e5ba2c}
+% manifest components/components.manifest

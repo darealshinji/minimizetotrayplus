@@ -1,0 +1,31 @@
+DEPTH        = ../../../..
+topsrcdir    = @top_srcdir@
+srcdir        = @srcdir@
+VPATH        = @srcdir@
+   
+include $(DEPTH)/config/autoconf.mk
+   
+MODULE         = minimizetotray
+LIBRARY_NAME     = trayInterfacePlatform
+FORCE_STATIC_LIB = 1
+FORCE_USE_PIC   = 1
+
+REQUIRES    =                \
+        xpcom                \
+        $(NULL)
+   
+CPPSRCS        =                \
+        trayToolkit.cpp            \
+        trayWin32WindowHider.cpp    \
+        trayWin32WindowIcon.cpp        \
+        trayWin32WindowWatch.cpp    \
+        $(NULL)
+		
+# add define to aid version detection
+ifeq (,$(findstring 1.9, $(MOZILLA_VERSION)))
+DEFINES += \
+	-DMOZILLA_VERSION_20=1 \
+	$(NULL)
+endif # define 
+
+include $(topsrcdir)/config/rules.mk

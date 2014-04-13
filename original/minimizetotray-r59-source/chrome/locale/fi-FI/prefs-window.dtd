@@ -1,0 +1,8 @@
+<!ENTITY dialog.title.label "Asetukset">
+<!ENTITY groupbox.general.label "Asetukset">
+<!ENTITY chk.always.label "Pienennä aina ilmaisinalueelle">
+<!ENTITY chk.always.accesskey "P">
+<!ENTITY chk.twoclickrestore.label "Require a double click to restore from the tray">
+<!ENTITY chk.twoclickrestore.accesskey "R">
+<!ENTITY chk.minimizeonclose.label "Minimize to the tray on close">
+<!ENTITY chk.minimizeonclose.accesskey "M">

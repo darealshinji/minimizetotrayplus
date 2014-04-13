@@ -1,0 +1,18 @@
+<!ENTITY dialog.title.label "Alternativ för minimera till meddelandefältet">
+<!ENTITY groupbox.general.label "Alternativ för uppstart">
+<!ENTITY chk.always.label "Minimera alltid till meddelandefältet istället för till aktivitetsfältet">
+<!ENTITY chk.always.accesskey "M">
+<!ENTITY chk.twoclickrestore.label "Tvinga dubbelklick för att återställa från meddelandefältet">
+<!ENTITY chk.twoclickrestore.accesskey "T">
+<!ENTITY chk.minimizeonclose.label "Minimera till meddelandefältet vid stängning">
+<!ENTITY chk.minimizeonclose.accesskey "M">
+<!ENTITY chk.trayalwaysshow.label "Visa alltid ikon i meddelandefältet">
+<!ENTITY chk.trayalwaysshow.accesskey "V">
+<!ENTITY chk.restoreonopen.label "Återställ fönster istället för att öppa nytt">
+<!ENTITY chk.restoreonopen.accesskey "Ä">
+<!ENTITY chk.onlyoneicon.label "Visa alltid endast en ikon i meddelandefältet">
+<!ENTITY chk.onlyoneicon.accesskey "I">
+<!ENTITY chk.startwidthwindows.label "Ladda &brandShortName; i snabbstartsläge vid systemuppstart">
+<!ENTITY chk.startwidthwindows.accesskey "L">
+<!ENTITY chk.currentuseronly.label "Endast för den nuvarande användaren">
+<!ENTITY chk.currentuseronly.accesskey "E">

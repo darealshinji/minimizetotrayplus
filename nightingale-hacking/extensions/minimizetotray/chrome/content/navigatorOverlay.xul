@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://minimizetotray/locale/brand.dtd"> %brandDTD;
+<!ENTITY % downloadsDTD SYSTEM "chrome://communicator/locale/downloads/downloadmanager.dtd"> %downloadsDTD;
+<!ENTITY % abMainWindowDTD SYSTEM "chrome://messenger/locale/addressbook/abMainWindow.dtd"> %abMainWindowDTD;
+<!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd"> %messengerDTD;
+<!ENTITY % editorDTD SYSTEM "chrome://editor/locale/editor.dtd"> %editorDTD;
+<!ENTITY % commonDTD SYSTEM "chrome://minimizetotray/locale/common.dtd"> %commonDTD;
+]>
+<overlay id="minimizetotrayNavigatorOverlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="text/javascript" src="chrome://minimizetotray/content/core.js"/>
+	<script type="text/javascript" src="chrome://minimizetotray/content/browser.js"/>
+	<!--  the key short cut -->
+	<keyset id="mainKeyset">
+		<key id="extensions.minimizetotrayplus.key.menuitem"/>
+	</keyset>
+	<!-- toolbar button -->
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="extensions-minimizetotray-button-minimize"/>
+	</toolbarpalette>
+	<!-- file menu item  -->
+	<menupopup id="menu_FilePopup">
+		<menuitem insertbefore="menu_FileQuitItem"
+			id="extensions.minimizetotrayplus.menuitem.menuitem"/>
+	</menupopup>
+	<script type="text/javascript">
+		window.extensions.minimizetotrayplus.trayMenuCreate = function(trayMenu) {
+			this.creatMenuItem(trayMenu, "item", "&cmd.restore.label;", "&cmd.restore.accesskey;", 
+				this.restoreWindow);
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&cmd.newwindow.label;", "&cmd.newwindow.accesskey;", toNavigator );
+			this.creatMenuItem(trayMenu, "item", "&editorWindow.titlemodifier;", null, toEditor );
+			this.creatMenuItem(trayMenu, "item", "&messengerWindow.title;", null, toMessengerWindow );
+			this.creatMenuItem(trayMenu, "item", "&downloadManager.title;", null, toDownloadManager );
+			this.creatMenuItem(trayMenu, "item", "&addressbookWindow.title;", null, toAddressBook);
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&cmd.close.window.label;", "&cmd.close.accesskey;", this.trayWindowClose);
+		};
+	</script>
+	<!-- F11 minimize-button Overlay -->
+	<toolbarbutton id="minimize-button" 
+		oncommand="window.extensions.minimizetotrayplus.browserFullScreenMinimizeOnCommand();"
+		onclick="window.extensions.minimizetotrayplus.browserFullScreenMinimizeOnClick(event);"/>
+</overlay>

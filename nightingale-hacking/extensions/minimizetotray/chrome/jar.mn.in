@@ -1,0 +1,70 @@
+minimizetotray.jar:
+% content minimizetotray %content/
+% skin minimizetotray classic/1.0 %skin/
+% locale	minimizetotray	ca-AD	%locale/ca-AD/
+#% locale	minimizetotray	cs-CZ	%locale/cs-CZ/
+% locale	minimizetotray	da-DK	%locale/da-DK/
+% locale	minimizetotray	de		%locale/de/
+% locale	minimizetotray	el-GR	%locale/el-GR/
+% locale	minimizetotray	en-US	%locale/en-US/
+% locale	minimizetotray	es-ES	%locale/es-ES/
+% locale	minimizetotray	et-EE	%locale/et-EE/
+#% locale	minimizetotray	eu-ES	%locale/eu-ES/
+#% locale	minimizetotray	fi-FI	%locale/fi-FI/
+% locale	minimizetotray	fr		%locale/fr/
+% locale	minimizetotray	fy-NL	%locale/fy-NL/
+% locale	minimizetotray	he-IL	%locale/he-IL/
+% locale	minimizetotray	hr-HR	%locale/hr-HR/
+% locale	minimizetotray	hu-HU	%locale/hu-HU/
+% locale	minimizetotray	is-IS	%locale/is-IS/
+% locale	minimizetotray	it-IT	%locale/it-IT/
+% locale	minimizetotray	ja	    %locale/ja/
+% locale	minimizetotray	ko-KR	%locale/ko-KR/
+% locale	minimizetotray	lt-LT	%locale/lt-LT/
+% locale	minimizetotray	mk-MK	%locale/mk-MK/
+#% locale	minimizetotray	nb-NO	%locale/nb-NO/
+% locale	minimizetotray	nl		%locale/nl/
+% locale	minimizetotray	pl-PL	%locale/pl-PL/
+% locale	minimizetotray	pt-BR	%locale/pt-BR/
+% locale	minimizetotray	pt-PT	%locale/pt-PT/
+% locale	minimizetotray	ro-RO	%locale/ro-RO/
+% locale	minimizetotray	ru-RU	%locale/ru-RU/
+% locale	minimizetotray	si-LK	%locale/si-LK/
+% locale	minimizetotray	sk-SK	%locale/sk-SK/
+#% locale	minimizetotray	sl-SL	%locale/sl-SL/
+% locale	minimizetotray	sr-RS	%locale/sr-RS/
+% locale	minimizetotray	sv-SE	%locale/sv-SE/
+% locale	minimizetotray	vi-VN	%locale/vi-VN/
+% locale	minimizetotray	zh-CN	%locale/zh-CN/
+% locale	minimizetotray	zh-TW	%locale/zh-TW/
+% override chrome://minimizetotray/locale/brand.dtd chrome://global/locale/brand.dtd
+##% Firefox, Flock
+#% overlay	chrome://browser/content/browser.xul		        chrome://minimizetotray/content/browserOverlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+#% overlay	chrome://browser/content/browser.xul		        chrome://minimizetotray/content/browserOverlay.xul application={a463f10c-3994-11da-9945-000d60ca027b}
+#% overlay	chrome://browser/content/browser.xul		        chrome://minimizetotray/content/minimizetotray.xul
+##% Firefox download window
+#% overlay chrome://mozapps/content/downloads/downloads.xul    chrome://minimizetotray/content/downloadOverlay.xul
+#% overlay chrome://mozapps/content/downloads/downloads.xul    chrome://minimizetotray/content/minimizetotray.xul
+##% Thunderbird, Postbox
+#% overlay	chrome://messenger/content/messenger.xul	        chrome://minimizetotray/content/mailOverlay.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+#% overlay	chrome://messenger/content/messenger.xul	        chrome://minimizetotray/content/mailOverlay.xul application=postbox@postbox-inc.com
+#% overlay	chrome://messenger/content/messenger.xul	        chrome://minimizetotray/content/minimizetotray.xul
+##% Sunbird
+#% overlay chrome://sunbird/content/calendar.xul				chrome://minimizetotray/content/calendarOverlay.xul
+#% overlay chrome://sunbird/content/calendar.xul		        chrome://minimizetotray/content/minimizetotray.xul
+##% SeaMonkey
+#% overlay chrome://navigator/content/navigator.xul			chrome://minimizetotray/content/navigatorOverlay.xul
+#% overlay chrome://navigator/content/navigator.xul			chrome://minimizetotray/content/minimizetotray.xul
+#% overlay	chrome://messenger/content/messenger.xul			chrome://minimizetotray/content/messengerOverlay.xul application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+#% overlay chrome://minimizetotray/content/turboNavigator.xul  chrome://editor/content/editorTasksOverlay.xul 
+##% Songbird
+% overlay chrome://songbird/content/xul/layoutWithBrowserOverlay.xul	chrome://minimizetotray/content/playerOverlay.xul
+% overlay chrome://songbird/content/xul/layoutWithBrowserOverlay.xul	chrome://minimizetotray/content/minimizetotray.xul
+% override chrome://minimizetotray/locale/brand.dtd chrome://branding/locale/brand.dtd application=songbird@songbirdnest.com
+% style	chrome://global/content/customizeToolbar.xul		chrome://minimizetotray/skin/minimizetotray.css
+% overlay    chrome://collab/content/collab.xul          chrome://minimizetotray/content/collabOverlay.xul
+% overlay    chrome://collab/content/collab.xul          chrome://minimizetotray/content/minimizetotray.xul
+% override      chrome://minimizetotray/locale/brand.dtd        chrome://branding/locale/brand.dtd application={ee53ece0-255c-4cc6-8a7e-81a8b6e5ba2c}
+% manifest components/components.manifest
+# packing
+@include_all_to

@@ -1,0 +1,13 @@
+<!--     toolbar button     -->
+<!--	 menu item			-->
+<!ENTITY cmd.totray.accesskey "n">
+<!ENTITY cmd.totray.key "M">
+<!ENTITY cmd.totray.modifier "accel,shift">
+<!--     tray popup     -->
+<!ENTITY cmd.restore.label "Povečaj &brandShortName;">
+<!ENTITY cmd.restore.window.label "Povečaj okno">
+<!ENTITY cmd.restore.accesskey "P">
+<!ENTITY cmd.close.label "Zapri &brandShortName;">
+<!ENTITY cmd.close.window.label "Zapri okno">
+<!ENTITY cmd.close.accesskey "Z">
+<!--     tray sub menu   -->

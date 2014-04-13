@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://minimizetotray/locale/brand.dtd"> %brandDTD;
+<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd"> %browserDTD;
+<!ENTITY % commonDTD SYSTEM "chrome://minimizetotray/locale/common.dtd"> %commonDTD;
+]>
+<overlay id="minimizetotrayBrowserOverlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="text/javascript" src="chrome://minimizetotray/content/core.js"/>
+	<script type="text/javascript" src="chrome://minimizetotray/content/browser.js"/>
+	<!--  the key short cut -->
+	<keyset id="mainKeyset">
+		<key id="extensions.minimizetotrayplus.key.menuitem"/>
+	</keyset>
+	<!-- toolbar button -->
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="extensions-minimizetotray-button-minimize"/>
+	</toolbarpalette>
+	<!-- file menu item  -->
+	<menupopup id="menu_FilePopup">
+		<menuitem insertafter="goOfflineMenuitem"
+			id="extensions.minimizetotrayplus.menuitem.menuitem"/>
+		<menuseparator insertafter="goOfflineMenuitem"/>
+	</menupopup>
+	<!-- tray popup menu definition - the js goes here so the enties resolve -->
+	<script type="text/javascript">
+		window.extensions.minimizetotrayplus.trayMenuCreate = function(trayMenu) {
+			this.createMenuItem(trayMenu, "item", "&cmd.restore.label;", "&cmd.restore.accesskey;", 
+				this.restoreWindow);
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&cmd.newwindow.label;", "&cmd.newwindow.accesskey;", 
+				function () { OpenBrowserWindow(); } );
+			this.creatMenuItem(trayMenu, "item", "&downloads.label;", "&downloads.accesskey;", 
+				function () { BrowserDownloadsUI(); } );
+			this.creatMenuItem(trayMenu, "separator");
+			this.createMenuItem(trayMenu, "item", "&cmd.close.window.label;", "&cmd.close.accesskey;", 
+				this.trayWindowClose);
+		};
+	</script>
+	<!-- F11 minimize-button Overlay -->
+	<toolbarbutton id="minimize-button" 
+		oncommand="window.extensions.minimizetotrayplus.browserFullScreenMinimizeOnCommand();"
+		onclick="window.extensions.minimizetotrayplus.browserFullScreenMinimizeOnClick(event);"/>
+</overlay>

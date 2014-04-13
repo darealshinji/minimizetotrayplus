@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://minimizetotray/locale/brand.dtd"> %brandDTD;
+<!ENTITY % commonDTD SYSTEM "chrome://minimizetotray/locale/common.dtd"> %commonDTD;
+]>
+<?xml-stylesheet href="chrome://minimizetotray/skin/minimizetotray.css" type="text/css"?>
+<overlay id="minimizetotrayBrowserOverlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="text/javascript" src="chrome://minimizetotray/content/core.js"/>
+	<script type="text/javascript" src="chrome://minimizetotray/content/download.js"/>
+	<keyset id="downloadKeys">
+		<key id="extensions.minimizetotrayplus.key.menuitem" key="&cmd.totray.key;"
+			modifiers="&cmd.totray.modifier;" oncommand="window.extensions.minimizetotrayplus.minimizeWindow();"/>
+	</keyset>
+	<!-- tray popup menu definition - the js goes here so the enties resolve -->
+	<script type="text/javascript">
+		window.extensions.minimizetotrayplus.trayMenuCreate = function(trayMenu) {
+			this.creatMenuItem(trayMenu, "item", "&cmd.restore.label;", "&cmd.restore.accesskey;", 
+				this.restoreWindow);
+			this.creatMenuItem(trayMenu, "item", "&cmd.close.window.label;", "&cmd.close.accesskey;", 
+				this.trayWindowClose);
+		};
+	</script>
+</overlay>

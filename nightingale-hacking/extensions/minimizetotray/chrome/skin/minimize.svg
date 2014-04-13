@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" version="1.1">
+ <title>MinimizeToTray Plus</title>
+ <g id="icon" transform="scale(1) translate(8,8)">
+  <defs>
+   <linearGradient id="backing" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#85acdd;"/>
+    <stop offset="100%" style="stop-color:#5171a9;"/>
+   </linearGradient>
+   <linearGradient id="center" x1="100%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" style="stop-color:#dee7f2;"/>
+    <stop offset="100%" style="stop-color:#fff;"/>
+   </linearGradient>
+  </defs>
+  <path d="M0,-8 l4,0 a2,2 0 0,1 2,2 l0,9 a1,1 0 0,1 -1,1 l-12,0 a1,1 0 0,1 -1,-1 l0,-9  a2,2 0 0,1 2,-2 z" style="fill:url(#backing);" />
+  <rect width="12" height="8" transform="translate(-7,-5)" style="fill:#fff;"/>
+  <rect width="10" height="6" transform="translate(-6,-4)" style="fill:url(#center);"/>
+  <path d="M0,-7 l4,0 a1,1 0 0,1 1,1 l-12,0 a1,1 0 0,1 1,-1 l4,0 z" style="fill:#92b9e8;" />
+  <g style="opacity:0.7" transform="translate(2,4)">
+      <path d="M0,-8 l3,0 a2,2 0 0,1 2,2 l0,7 a1,1 0 0,1 -1,1 l-11,0 a1,1 0 0,1 -1,-1 l0,-7  a2,2 0 0,1 2,-2 z" style="fill:url(#backing);" />
+      <rect width="11" height="6" transform="translate(-7,-5)" style="fill:#fff;"/>
+      <rect width="9" height="4" transform="translate(-6,-4)" style="fill:url(#center);"/>
+      <path d="M0,-7 l3,0 a1,1 0 0,1 1,1 l-11,0 a1,1 0 0,1 1,-1 l3,0 z" style="fill:#92b9e8;" />
+      <g style="opacity:0.7" transform="translate(2,4)">
+          <path d="M0,-8 l2,0 a2,2 0 0,1 2,2 l0,5 a1,1 0 0,1 -1,1 l-10,0 a1,1 0 0,1 -1,-1 l0,-5  a2,2 0 0,1 2,-2 z" style="fill:url(#backing);" />
+          <rect width="10" height="4" transform="translate(-7,-5)" style="fill:#fff;"/>
+          <rect width="8" height="2" transform="translate(-6,-4)" style="fill:url(#center);"/>
+          <path d="M0,-7 l2,0 a1,1 0 0,1 1,1 l-10,0 a1,1 0 0,1 1,-1 l2,0 z" style="fill:#92b9e8;" />
+      </g>
+  </g>
+ </g>
+</svg>

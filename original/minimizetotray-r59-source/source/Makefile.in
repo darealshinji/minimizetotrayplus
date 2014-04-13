@@ -1,0 +1,77 @@
+DEPTH        = ../../..
+topsrcdir    = @top_srcdir@
+srcdir        = @srcdir@
+VPATH        = @srcdir@
+   
+include $(DEPTH)/config/autoconf.mk
+   
+IS_COMPONENT    = 1
+MODULE          = minimizetotray
+LIBRARY_NAME    = minimizetotray
+XPIDL_MODULE    = minimizetotray
+FORCE_SHARED_LIB = 1
+   
+XPI_NAME = minimizetotray
+
+EXPORTS        =            \
+        trayRoutine.h        \
+        $(NULL)
+
+XPIDLSRCS = \
+		trayInterface.idl \
+		$(NULL)
+
+REQUIRES    =            \
+        xpcom_glue        \
+        xpcom            \
+        string            \
+        gfx            \
+        widget            \
+        docshell        \
+        appshell        \
+        dom            \
+        content            \
+        layout            \
+        $(NULL)
+
+CPPSRCS        =            \
+        MinimizeToTray.cpp    \
+        trayRoutine.cpp        \
+        trayMenuItem.cpp        \
+        $(NULL)
+
+# add define to aid version detection
+ifeq (,$(findstring 1.9, $(MOZILLA_VERSION)))
+DEFINES += \
+	-DMOZILLA_VERSION_20=1 \
+	$(NULL)
+endif # define
+
+# Platform specific stuff
+
+ifeq ($(MOZ_WIDGET_TOOLKIT),windows)
+SHARED_LIBRARY_LIBS = windows/$(LIB_PREFIX)trayInterfacePlatform.$(LIB_SUFFIX)
+OS_LIBS += shell32.lib
+endif # windows
+
+ifeq ($(MOZ_WIDGET_TOOLKIT),gtk2)
+SHARED_LIBRARY_LIBS = linux/$(LIB_PREFIX)trayInterfacePlatform.$(LIB_SUFFIX)
+endif # gtk2
+
+include $(topsrcdir)/config/rules.mk
+
+EXTRA_DSO_LDOPTS +=            \
+        $(XPCOM_GLUE_LDOPTS)    \
+        $(NSPR_LIBS)        \
+        $(NULL)
+
+ifeq ($(MOZ_WIDGET_TOOLKIT),gtk2)
+CXXFLAGS    +=            \
+        $(MOZ_GTK2_CFLAGS)    \
+        $(NULL)
+
+EXTRA_DSO_LDOPTS +=            \
+        $(MOZ_GTK2_LIBS)    \
+        $(XLIBS)        \
+        $(NULL)
+endif

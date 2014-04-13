@@ -1,0 +1,7 @@
+interfaces minimizetotray.xpt
+
+component {74178bba-c85d-11de-8989-00247e68d2ed} trayCommandLine.js
+contract @codefisher.org/minimizetotray/turbo-startup;1 {74178bba-c85d-11de-8989-00247e68d2ed}
+category command-line-handler m-minimizetotray @codefisher.org/minimizetotray/turbo-startup;1
+
+binary-component minimizetotray.dll abi=WINNT_x86-msvc

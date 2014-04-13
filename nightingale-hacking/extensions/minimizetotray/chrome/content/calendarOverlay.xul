@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://minimizetotray/locale/brand.dtd"> %brandDTD;
+<!ENTITY % sunbirdDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %sunbirdDTD;
+<!ENTITY % commonDTD SYSTEM "chrome://minimizetotray/locale/common.dtd"> %commonDTD;
+]>
+<overlay id="minimizetotrayBrowserOverlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="text/javascript" src="chrome://minimizetotray/content/core.js"/>
+	<script type="text/javascript" src="chrome://minimizetotray/content/calender.js"/>
+	<!--  the key short cut -->
+	<keyset id="tasksKeys">
+		<key id="extensions.minimizetotrayplus.key.menuitem"/>
+	</keyset>
+	<!-- toolbar button -->
+	<toolbarpalette id="calendarToolbarPalette">
+		<toolbarbutton id="extensions-minimizetotray-button-minimize"/>
+	</toolbarpalette>
+	<!-- file menu item  -->
+	<menupopup id="menu_FilePopup">
+		<menuitem insertafter="calendar-print-sep"
+			id="extensions.minimizetotrayplus.menuitem.menuitem"/>
+	</menupopup>
+	<!-- tray popup -->
+	<script type="text/javascript">
+		window.extensions.minimizetotrayplus.trayMenuCreate = function(trayMenu) {
+			this.creatMenuItem(trayMenu, "item", "&cmd.restore.label;", "&cmd.restore.accesskey;", 
+				this.restoreWindow);
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&cmd.newwindow.label;", "&cmd.newwindow.accesskey;", 
+				function () { window.extensions.minimizetotrayplus.openNewWindow(); } );
+			this.creatMenuItem(trayMenu, "item", "&event.new.event;", "&event.new.event.accesskey;", 
+				function () { goDoCommand('calendar_new_event_command'); } );
+			this.creatMenuItem(trayMenu, "item", "&event.new.todo;", "&event.new.todo.accesskey;", 
+				function () { goDoCommand('calendar_new_todo_command'); } );
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&cmd.close.window.label;", "&cmd.close.accesskey;", 
+				this.trayWindowClose);
+		};
+	</script>
+</overlay>

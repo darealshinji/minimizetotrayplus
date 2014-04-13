@@ -1,0 +1,7 @@
+<!ENTITY groupbox.general.label "Možnosti pomanjševanja v sistemsko vrstico">
+<!ENTITY chk.always.label "Vedno pomanjšaj v sistemsko namesto v opravilno vrstico">
+<!ENTITY chk.always.accesskey "V">
+<!ENTITY chk.twoclickrestore.label "Za povečanje iz sistemske vrstice je potreben dvojni klik">
+<!ENTITY chk.twoclickrestore.accesskey "Z">
+<!ENTITY chk.minimizeonclose.label "Ob zapiranju pomanjšaj v sistemsko vrstico">
+<!ENTITY chk.minimizeonclose.accesskey "O">
