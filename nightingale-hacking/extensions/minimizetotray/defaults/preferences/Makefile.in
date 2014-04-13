@@ -7,7 +7,7 @@ include $(DEPTH)/build/autodefs.mk
 
 IS_EXTENSION = 1
 
-SONGBIRD_PREFS += $(srcdir)/minimizetotray.js \
+SONGBIRD_PREFS += $(srcdir)/prefs.js \
                   $(NULL)
 
 include $(topsrcdir)/build/rules.mk
