@@ -1,0 +1,7 @@
+compiled/dist/*                          usr/lib/nightingale
+compiled/icons/hicolor/*                 usr/share/icons/hicolor
+compiled/documentation/manpage/nightingale.1.gz  usr/share/man/man1
+app/branding/nightingale.svg             usr/share/icons/hicolor/scalable/apps
+installer/common/*.desktop               usr/share/applications
+compiled/xpi-stage/minimizetotray/*.xpi  usr/share/nightingale-addons
+addons/*.xpi                             usr/share/nightingale-addons

@@ -1,0 +1,40 @@
+#!/bin/sh -e
+
+# less to download than using git
+wget "https://github.com/nightingale-media-player/nightingale-hacking/archive/sb-trunk-oldxul.zip"
+
+git clone https://github.com/darealshinji/minimizetotrayplus.git
+
+unzip sb-trunk-oldxul.zip
+cd nightingale-hacking-sb-trunk-oldxul/
+mv debian debian-upstream
+
+# clean up - make the source package smaller
+rm -rf tools/win32 components/remoteapi/test/media/*.mp3
+
+# download dependencies
+version=1.12
+depdate=`grep -e 'depdate=' build.sh | tail -c 9`
+cd dependencies/
+wget "http://downloads.sourceforge.net/project/ngale/1.12-Build-Deps/linux-i686-$version-$depdate-release-final.tar.lzma"
+wget "http://downloads.sourceforge.net/project/ngale/1.12-Build-Deps/linux-x86_64-$version-$depdate-release-final.tar.lzma"
+wget "http://downloads.sourceforge.net/project/ngale/1.12-Build-Deps/vendor-$version.zip"
+cd ..
+
+# copy minimizetotray extension
+cp -rf ../minimizetotrayplus/nightingale-hacking/extensions/* extensions/
+
+# download additional extensions
+git clone https://github.com/nightingale-media-player/nightingale-addons.git
+mv nightingale-addons addons
+rm -rf addons/.git* addons/developertools
+cd ..
+
+# create tarball
+tar cvf - nightingale-hacking-sb-trunk-oldxul | xz > nightingale_1.12.2a+INSERTDATE.orig.tar.xz
+
+# clean up
+rm -rf \
+  sb-trunk-oldxul.zip \
+  nightingale-hacking-sb-trunk-oldxul \
+  minimizetotrayplus
