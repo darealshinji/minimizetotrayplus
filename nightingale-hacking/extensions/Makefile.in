@@ -68,10 +68,11 @@ ifeq (1,$(NIGHTINGALE_UNITY))
     DEFAULT_EXTENSIONS += unity-integration
 endif
 
-# MPRIS, MinimizeToTray Plus
+# MPRIS, GTK Window Hiding, GTK Window Hiding
 ifeq (linux,$(SB_PLATFORM))
     DEFAULT_EXTENSIONS += mpris \
                           minimizetotray \
+                          hide-on-close \
                           $(NULL)
 endif
 
