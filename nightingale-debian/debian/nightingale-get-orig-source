@@ -10,7 +10,8 @@ cd nightingale-hacking-sb-trunk-oldxul/
 mv debian debian-upstream
 
 # clean up - make the source package smaller
-rm -rf tools/win32 components/remoteapi/test/media/*.mp3
+find . -name *.mp3 -delete
+rm -rf tools/win32
 
 # download dependencies
 version=1.12
@@ -26,9 +27,11 @@ cp -rf ../minimizetotrayplus/nightingale-hacking/extensions/* extensions/
 
 # download additional extensions
 git clone https://github.com/nightingale-media-player/nightingale-addons.git
-mv nightingale-addons addons
-rm -rf addons/.git* addons/developertools
-cd ..
+mkdir addons/
+cd nightingale-addons/
+mv make.py eqpresets equalizerpane newtab ../addons
+rm -rf ../nightingale-addons
+cd ../..
 
 # create tarball
 tar cvf - nightingale-hacking-sb-trunk-oldxul | xz > nightingale_1.12.2a+INSERTDATE.orig.tar.xz
