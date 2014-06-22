@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 
 # less to download than using git
 wget "https://github.com/nightingale-media-player/nightingale-hacking/archive/sb-trunk-oldxul.zip"
@@ -16,10 +16,10 @@ rm -rf tools/win32
 # download dependencies
 version=1.12
 depdate=`grep -e 'depdate=' build.sh | tail -c 9`
+depsource=http://downloads.sourceforge.net/project/ngale/1.12-Build-Deps
 cd dependencies/
-wget "http://downloads.sourceforge.net/project/ngale/1.12-Build-Deps/linux-i686-$version-$depdate-release-final.tar.lzma"
-wget "http://downloads.sourceforge.net/project/ngale/1.12-Build-Deps/linux-x86_64-$version-$depdate-release-final.tar.lzma"
-wget "http://downloads.sourceforge.net/project/ngale/1.12-Build-Deps/vendor-$version.zip"
+wget "$depsource/linux-i686-$version-$depdate-release-final.tar.lzma"
+wget "$depsource/linux-x86_64-$version-$depdate-release-final.tar.lzma"
 cd ..
 
 # copy minimizetotray extension
@@ -34,7 +34,7 @@ rm -rf ../nightingale-addons
 cd ../..
 
 # create tarball
-tar cvf - nightingale-hacking-sb-trunk-oldxul | xz > nightingale_1.12.2a+INSERTDATE.orig.tar.xz
+tar cvf - nightingale-hacking-sb-trunk-oldxul | xz > nightingale_1.12.2a+gitINSERTDATE.orig.tar.xz
 
 # clean up
 rm -rf \
