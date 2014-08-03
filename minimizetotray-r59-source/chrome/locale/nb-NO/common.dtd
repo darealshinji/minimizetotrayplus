@@ -1,0 +1,18 @@
+<!--     toolbar button     -->
+<!--	 menu item			-->
+<!ENTITY cmd.totray.label "Minimér til systemstatusfelt">
+<!ENTITY cmd.totray.accesskey "i">
+<!ENTITY cmd.totray.key "M">
+<!ENTITY cmd.totray.modifier "accel,shift">
+<!--     tray popup     -->
+<!ENTITY cmd.restore.label "Gjenopprett &brandShortName;">
+<!ENTITY cmd.restore.window.label "Gjenopprett vindu">
+<!ENTITY cmd.restore.accesskey "G">
+<!ENTITY cmd.close.label "Lukk &brandShortName;">
+<!ENTITY cmd.close.window.label "Lukk vindu">
+<!ENTITY cmd.close.accesskey "L">
+<!ENTITY cmd.quit.label "Avslutt hurtigstart">
+<!ENTITY cmd.quit.accesskey "A">
+<!ENTITY cmd.newwindow.label "Åpne nytt vindu">
+<!ENTITY cmd.newwindow.accesskey "n">
+<!--     tray sub menu   -->

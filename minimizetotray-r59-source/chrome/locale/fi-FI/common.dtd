@@ -1,0 +1,18 @@
+<!--     toolbar button     -->
+<!--	 menu item			-->
+<!ENTITY cmd.totray.label "Pienennä ilmaisinalueelle">
+<!ENTITY cmd.totray.accesskey "i">
+<!ENTITY cmd.totray.key "M">
+<!ENTITY cmd.totray.modifier "accel,shift">
+<!--     tray popup     -->
+<!ENTITY cmd.restore.label "Palauta &brandShortName;">
+<!ENTITY cmd.restore.window.label "Palauta ikkuna">
+<!ENTITY cmd.restore.accesskey "P">
+<!ENTITY cmd.close.label "Sulje &brandShortName;">
+<!ENTITY cmd.close.window.label "Sulje ikkuna">
+<!ENTITY cmd.close.accesskey "S">
+<!ENTITY cmd.quit.label "Lopeta">
+<!ENTITY cmd.quit.accesskey "L">
+<!ENTITY cmd.newwindow.label "Avaa uusi ikkuna">
+<!ENTITY cmd.newwindow.accesskey "A">
+<!--     tray sub menu   -->

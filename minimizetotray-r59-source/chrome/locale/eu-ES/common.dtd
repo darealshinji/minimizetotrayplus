@@ -1,0 +1,18 @@
+<!--     toolbar button     -->
+<!--	 menu item			-->
+<!ENTITY cmd.totray.label "Erretilura Ikonotu">
+<!ENTITY cmd.totray.accesskey "E">
+<!ENTITY cmd.totray.key "i">
+<!ENTITY cmd.totray.modifier "accel,shift">
+<!--     tray popup     -->
+<!ENTITY cmd.restore.label "&brandShortName; Leheneratu">
+<!ENTITY cmd.restore.window.label "Leihoa Leheneratu">
+<!ENTITY cmd.restore.accesskey "L">
+<!ENTITY cmd.close.label "&brandShortName; Itxi">
+<!ENTITY cmd.close.window.label "Leihoa Itxi">
+<!ENTITY cmd.close.accesskey "I">
+<!ENTITY cmd.quit.label "Lasterbidea Itxi">
+<!ENTITY cmd.quit.accesskey "a">
+<!ENTITY cmd.newwindow.label "Leiho Berria Ireki">
+<!ENTITY cmd.newwindow.accesskey "B">
+<!--     tray sub menu   -->

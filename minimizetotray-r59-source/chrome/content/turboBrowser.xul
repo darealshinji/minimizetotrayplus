@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://minimizetotray/locale/brand.dtd"> %brandDTD;
+<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd"> %browserDTD;
+<!ENTITY % commonDTD SYSTEM "chrome://minimizetotray/locale/common.dtd"> %commonDTD;
+]>
+<window id="MinimizeToTrayWindow"
+	onclose="window.extensions.minimizetotrayplus.trayTurboClose();"
+	hidechrome="true"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	windowtype="minimizetotray::turbo">
+	<script type="text/javascript" src="chrome://minimizetotray/content/core.js"/>
+	<script type="text/javascript" src="chrome://minimizetotray/content/turbo.js"/>
+	<script type="text/javascript" src="chrome://browser/content/browser.js"/>
+	<script type="text/javascript" src="chrome://global/content/globalOverlay.js"/>
+	<!-- tray popup menu definition - the js goes here so the enties resolve -->
+	<script type="text/javascript">
+		window.extensions.minimizetotrayplus.retorableWindowList = function() {
+			var trayMenu = Cc["@mozilla.org/array;1"].createInstance(Ci.nsIMutableArray);
+			self = window.extensions.minimizetotrayplus;
+			self.populateTurboMenu(trayMenu);
+			self.creatMenuItem(trayMenu, "separator");
+			self.creatMenuItem(trayMenu, "item", "&cmd.restoreall.label;", "&cmd.restoreall.accesskey;", 
+					self.restoreAllWindows);
+			return trayMenu;
+		};
+		window.extensions.minimizetotrayplus.trayMenuCreate = function(trayMenu) {
+			if(this.trayRestorableWindows().length) {
+				this.creatMenuItem(trayMenu, "menu", "&menu.restore.label;", "&menu.restore.accesskey;", 
+					this.retorableWindowList );
+				this.creatMenuItem(trayMenu, "separator");
+			}
+			this.creatMenuItem(trayMenu, "item", "&cmd.newwindow.label;", "&cmd.newwindow.accesskey;", 
+				function () { OpenBrowserWindow(); } );
+			this.creatMenuItem(trayMenu, "item", "&downloads.label;", "&downloads.accesskey;", 
+				function () { BrowserDownloadsUI(); } );
+			this.creatMenuItem(trayMenu, "separator");
+			this.creatMenuItem(trayMenu, "item", "&cmd.quit.label;", "&cmd.quit.accesskey;", 
+				function () { 
+					window.extensions.minimizetotrayplus.trayTurboClose(); 
+					goQuitApplication(); 
+				} );
+		};
+	</script>
+</window>

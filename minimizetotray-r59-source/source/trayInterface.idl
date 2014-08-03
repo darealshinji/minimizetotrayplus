@@ -1,0 +1,195 @@
+#include "nsISupports.idl"
+
+interface nsIDOMWindow;
+interface nsIArray;
+
+/**
+ * trayInterface
+ *
+ * Scriptable interfaces to allow JS to specify a window
+ * to minimize to the system tray (for Win32).
+ *
+ * @author Mook <mook.moz@gmail.com>
+ * @version 0.1
+ * @status in-flux
+ */
+
+
+/**
+ * trayIWindowHider
+ *
+ * Interface to hide a window 
+ *
+ * @author Mook <mook.moz@gmail.com>
+ * @version 0.1
+ * @status in-flux
+ * @see trayIWindowWatcherCallback
+ */
+[scriptable, uuid(E3995B34-BD1C-46cc-8416-E49AE4FD9877)]
+interface trayIWindowHider : nsISupports
+{
+	/**
+	  * If a window is suppressed it will prevent itself from being restored
+	  */
+	attribute boolean suppressed;
+
+	/**
+     * Start watching a window for so that it may fire events as needed.
+	 * This will fire "TrayMinimize", "TrayMinimizeAll", 
+	 * "TrayRestore", "TrayClose" events
+	 *
+	 * - TrayMinimize		event where we want to minimize to tray
+	 * - TrayMinimizeAll	event where we want to minimize all window to tray
+	 * - TrayRestore		event where the window should be restored
+	 * - TrayClose			event where the window is about to close and we may want to minimize it instead
+	 *
+	 * Event handlers should call event.preventDefault() to stop the 
+	 * normal action that would happen.
+	 * 
+	 * @param aDOMWindow    the window that we want to watch
+	 */
+	void watch(in nsIDOMWindow aDOMWindow);
+
+
+	/**
+	 * minimize the given windows into the system tray
+	 *
+	 * @param aCount        the number of windows to minimize
+	 * @param aBaseWindows  the array of nsIBaseWindow to minimize
+	 */
+	void minimize(
+		in PRUint32 aCount,
+		[array, size_is(aCount)] in nsIDOMWindow aDOMWindows);
+
+	/**
+	 * restore the previously minimzed set of windows
+	 *
+	 * @precondition	minimize has been successfully called first
+	 */
+	void restore();
+
+    /**
+     * returns true if the watched window is the one currently in focus
+     */
+    boolean windowActive();
+
+};
+
+/**
+ * trayICallback
+ *
+ * A call back function to be used by the tray menu items,
+ * implemented as a JavaScript function
+ * @author Michael Buckley <admin@codefisher.org>
+ * @version 0.1
+ * @status in-flux
+ */
+[scriptable, function, uuid(e7e833dc-8edc-11df-b34c-00247e68d2ed)]
+interface trayICallback : nsISupports
+{
+    /*
+     *  The JavaScript function used as a callback
+     */
+    nsIArray call();
+};
+
+/**
+ * trayIWindowIcon
+ *
+ * Interface to create and monitor a tray icon
+ *
+ * @author Mook <mook.moz@gmail.com>
+ * @contribuiter Michael Buckley <admin@codefisher.org>
+ * @version 0.1
+ * @status in-flux
+ * @see trayIWindowWatcherCallback
+ */
+[scriptable, uuid(C612278A-6909-11DE-A127-001320848EBC)]
+interface trayIWindowIcon : nsISupports
+{
+	/**
+	 * initialise the tray icon passing in needed data
+	 *
+	 * @param aBaseWindow   the window to which the icon is associated
+	 * @param aString       a forced title, or nsnull to use window caption
+	 * @param aMenuCallback a function that returns all the items in the menu
+	 */
+	void setup(
+		in nsIDOMWindow aDomWindow,
+		in AString aTitle,
+		in trayICallback aMenuCallback);
+
+    /**
+	 * show/hide the system tray icons.
+	 *
+	 * @precondition	setup has been successfully called first
+	 */
+	void showIcon();
+	void hideIcon();
+	
+    /**
+     * Sets the tooltip of the tray icon to some new value
+     */
+    void setTooltip(in AString aTitle);
+};
+
+[scriptable, uuid(a2eebcce-8edc-11df-a1bc-00247e68d2ed)]
+interface trayIMenuItem : nsISupports
+{
+
+    /**
+     * initialise a menu item
+     *
+     * @param aMenuType
+     * @param aLabel
+     * @param aCallback
+     */
+    void setup(
+        in PRUint32 aMenuType,
+        in AString aLabel,
+        in trayICallback aCallback);
+
+    /**
+     * Flags for each of the allowed menu item types
+     */
+	const PRUint32 MENU_ITEM = 1;
+	const PRUint32 SEPARATOR = 2;
+	const PRUint32 MENU 	 = 3;
+
+    /** 
+     * Accessors for the items in the menu item
+     *
+     * @precondition	setup has been successfully called first
+     */
+    PRUint32 menuType();
+    AString label();
+    trayICallback getCallback();
+    /*
+     * Runs the callback function belonging to the menu item, returns
+     * NULL or an array of menu items
+     */
+    nsIArray callback();
+
+};
+
+
+/**
+ * trayICommandLine
+ *
+ * allows access to the commandline handler, 
+ * expected to be implimented in javascript
+ * @author Michael Buckley <admin@codefisher.org>
+ * @version 0.1
+ * @status in-flux
+ * @see trayIWindowWatcherCallback
+ */
+
+[scriptable, uuid(4480b09a-6951-11de-bfc6-001320848ebc)]
+interface trayICommandLine : nsISupports
+{
+  /**
+   * returns if the application was started in turbo mode
+   *
+   */
+  boolean isTurboMode();
+};

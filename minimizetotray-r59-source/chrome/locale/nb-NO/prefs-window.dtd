@@ -1,0 +1,8 @@
+<!ENTITY dialog.title.label "Alternativer for Minimér til systemstatusfelt">
+<!ENTITY groupbox.general.label "Alternativer for Minimér til systemstatusfelt">
+<!ENTITY chk.always.label "Alltid minimér til systemstatusfelt">
+<!ENTITY chk.always.accesskey "A">
+<!ENTITY chk.twoclickrestore.label "Krev et dobbeltklikk for å gjennopprette fra systemstatusfeltet">
+<!ENTITY chk.twoclickrestore.accesskey "R">
+<!ENTITY chk.minimizeonclose.label "Minimer til systemstatusfeltet ved lukking">
+<!ENTITY chk.minimizeonclose.accesskey "M">

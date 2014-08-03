@@ -1,0 +1,27 @@
+DEPTH        = ../../../..
+topsrcdir    = @top_srcdir@
+srcdir        = @srcdir@
+VPATH        = @srcdir@
+   
+include $(DEPTH)/config/autoconf.mk
+   
+MODULE         = minimizetotray
+LIBRARY_NAME     = trayInterfacePlatform
+FORCE_STATIC_LIB = 1
+FORCE_USE_PIC   = 1
+
+REQUIRES    =                \
+        xpcom                \
+        $(NULL)
+   
+CPPSRCS        =                \
+        trayLinuxWindowHider.cpp    \
+        trayLinuxWindowIcon.cpp        \
+        keyState.cpp        \
+        $(NULL)
+
+include $(topsrcdir)/config/rules.mk
+
+CXXFLAGS        +=                \
+                -I$(srcdir)/..                  \
+                $(MOZ_GTK2_CFLAGS)
