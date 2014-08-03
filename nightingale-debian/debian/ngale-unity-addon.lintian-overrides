@@ -1,3 +1,0 @@
-# At the moment all files for Nightingale are stored in a single folder.
-# Re-arranging everything would be too much work without really achieving anything.
-ngale-unity-addon binary: jar-not-in-usr-share
