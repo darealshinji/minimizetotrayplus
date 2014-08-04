@@ -39,6 +39,14 @@ ifeq (linux,$(SB_PLATFORM))
                              $(NULL)
 endif
 
+ifeq (windows,$(SB_PLATFORM))
+   CPP_SRCS += trayToolkit.cpp \
+               trayWin32WindowHider.cpp \
+               trayWin32WindowIcon.cpp \
+               trayWin32WindowWatch.cpp \
+               $(NULL)
+endif
+
 
 CPP_EXTRA_INCLUDES = ../public \
                      $(addprefix $(MOZSDK_INCLUDE_DIR)/,$(EXTRA_CPP_INCLUDES)) \
