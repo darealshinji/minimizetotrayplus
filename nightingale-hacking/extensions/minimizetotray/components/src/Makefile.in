@@ -9,30 +9,32 @@ IS_EXTENSION = 1
 
 # ~= mozilla build system's REQUIRES
 EXTRA_CPP_INCLUDES = \
-        xpcom_glue        \
-        xpcom            \
-        string            \
-        gfx            \
-        widget            \
-        docshell        \
-        appshell        \
-        dom            \
-        content            \
-        layout            \
+        xpcom_glue \
+        xpcom \
+        string \
+        gfx \
+        widget \
+        docshell \
+        appshell \
+        dom \
+        content \
+        layout \
         $(NULL)
 
 CPP_SRCS = MinimizeToTray.cpp \
-           trayRoutine.cpp        \
-           trayMenuItem.cpp        \
+           trayRoutine.cpp \
+           trayMenuItem.cpp \
            $(NULL)
 
 ifeq (linux,$(SB_PLATFORM))
-   CPP_SRCS += trayLinuxWindowHider.cpp    \
-               trayLinuxWindowIcon.cpp        \
-               keyState.cpp        \
+   CPP_SRCS += trayLinuxWindowHider.cpp \
+               trayLinuxWindowIcon.cpp \
+               keyState.cpp \
                $(NULL)
   
    CPP_EXTRA_FLAGS += $(GTK_CFLAGS) \
+                      -shared \
+                      -fPIC \
                       $(NULL)
 
    DYNAMIC_LIB_RAW_IMPORTS = $(GTK_LIBS) \
