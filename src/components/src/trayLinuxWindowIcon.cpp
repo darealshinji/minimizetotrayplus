@@ -131,6 +131,7 @@ NS_IMETHODIMP trayLinuxWindowIcon::SetTooltip(const nsAString & aTitle) {
 		title = ToNewUTF8String(aTitle);
 	}
     gtk_status_icon_set_tooltip(this->m_systray_icon, title);
+    return NS_OK;
 }
 
 /* void setup (in nsIDOMWindow aDomWindow, in AString aTitle); */
