@@ -46,9 +46,9 @@ ifeq (,$(wildcard $(MOZSDK_SCRIPTS_DIR)/printconfigsetting.py))
       see http://wiki.getnightingale.com/doku.php?id=build#build_it_yourself)
 endif
 
-ifeq (,$(wildcard $(MOZBROWSER_DIR)))
-   $(error Missing mozbrowser directory ($(MOZBROWSER_DIR)). Bailing...)
-endif
+#ifeq (,$(wildcard $(MOZBROWSER_DIR)))
+#   $(error Missing mozbrowser directory ($(MOZBROWSER_DIR)). Bailing...)
+#endif
 
 BUILDINFO_FILE := $(DEPTH)/build/sbBuildInfo.mk
 
