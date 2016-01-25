@@ -180,6 +180,8 @@ esac
 
 cd $buildir
 
+echo 'ac_add_options --with-media-core=none' >> nightingale.config
+
 make clobber
 rm -rf compiled &> /dev/null #sometimes clobber doesn't nuke it all
 make

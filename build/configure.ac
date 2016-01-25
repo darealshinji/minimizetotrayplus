@@ -975,11 +975,6 @@ case "$SB_PLATFORM" in
     AC_SUBST(GLIB_CFLAGS)
     AC_SUBST(GLIB_LIBS)
 
-    # The iPod support needs dbus.
-    PKG_CHECK_MODULES(DBUS, dbus-glib-1)
-    AC_SUBST(DBUS_CFLAGS)
-    AC_SUBST(DBUS_LIBS)
-
     # Breakpad needs stabs debugging data, so always explicitly request it with
     GCC_COMPILER_FLAGS="-c -fPIC -fshort-wchar -fexceptions -fnon-call-exceptions -funwind-tables -fasynchronous-unwind-tables -fno-rtti -fno-strict-aliasing -Wall -Wno-conversion -Wno-attributes -Wpointer-arith -Wcast-align -Wno-long-long -pipe -pthread"
     if test "$enable_debug" = "yes"; then
@@ -1045,7 +1040,6 @@ case "$SB_PLATFORM" in
     GST_REQS=0.10.1
     GSTPLUG_REQS=0.10.7
 
-    PKG_CHECK_MODULES(GSTREAMER, gstreamer-0.10 >= $GST_REQS gstreamer-plugins-base-0.10 >= $GSTPLUG_REQS)
     PKG_CHECK_MODULES(GTK, gtk+-2.0)
     AC_SUBST(GSTREAMER_CFLAGS)
     GSTREAMER_LIBS="$GSTREAMER_LIBS -lgstinterfaces-$GST_MAJORMINOR -lgstvideo-$GST_MAJORMINOR -lgstaudio-$GST_MAJORMINOR"
@@ -1056,11 +1050,6 @@ case "$SB_PLATFORM" in
     PKG_CHECK_MODULES(GLIB, glib-2.0)
     AC_SUBST(GLIB_CFLAGS)
     AC_SUBST(GLIB_LIBS)
-
-    # The iPod support needs dbus.
-    PKG_CHECK_MODULES(DBUS, dbus-glib-1)
-    AC_SUBST(DBUS_CFLAGS)
-    AC_SUBST(DBUS_LIBS)
 
     if test "$GNU_CC" = "yes" ; then
       AC_MSG_ERROR([GCC not yet supported])
