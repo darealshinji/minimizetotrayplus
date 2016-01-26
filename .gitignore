@@ -1,0 +1,7 @@
+/dependencies/*/
+/build/
+
+*.xpi
+*.stamp
+*.tar.bz2
+*.tar.lzma
